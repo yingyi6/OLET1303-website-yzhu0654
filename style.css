@@ -114,7 +114,10 @@ nav ul li ul li a:hover{
 /*STACKED NAVIGATION BAR STYLES*/
 
 .stacked-nav{ 
-	display: none; /*hiding the stacked navigation bar until the screen is resized */
+	display:none; /*hiding the stacked navigation bar until the screen is resized */
+	margin:auto;
+	overflow-x: hidden;
+	font-family: Helvetica;
 } 
 
 /*FUNCTION*/
@@ -131,17 +134,10 @@ label:hover {
     cursor: pointer;
 }
 label {
-    width: 100%;
 	display: block;
 	font-weight: bold;
 	color: rgb(35, 56, 78);
 	font-size: 18px;
-}
-
-.stacked-nav {
-    width: 100%;
-	overflow-x: hidden;
-	font-family: Helvetica;
 }
 
 #nav-icon {
@@ -156,7 +152,6 @@ label {
     line-height: 50px;
     margin: 0;
     padding: 0 2em;
-    width: 100%;
 }
 
 label:hover {
