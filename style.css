@@ -316,13 +316,13 @@ figure{
 }
 
 .latestnews li{
-	border-top: 2px solid rgb(90, 90, 90); /* this creates a line ontop of the listed items to create a sense of sectioning */
+	border-top: 2px solid rgb(110, 136, 168);/* this creates a line ontop of the listed items to create a sense of sectioning */
 	padding:10px;
 	margin-right:15px;
 }
 
 .latestnews li:last-child{ /* using the last-child selector to select the last element of the list to apply styles to it individually */
-	border-bottom: 2px solid rgb(90, 90, 90);
+	border-bottom: 2px solid rgb(110, 136, 168);
 }
 
 .latestnews img{
