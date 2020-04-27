@@ -1,0 +1,418 @@
+html{
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: Helvetica;
+	background-color: rgb(231, 237, 250);
+	margin:0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1{
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+.content{
+	display:flex;
+	margin:auto;
+	max-width:1300px; /* making the max width of the content 1300px, to make the content reponsive */
+	justify-content: center;
+}
+
+
+/* HEADER IMAGE STYLES*/
+.hero-image{
+	position: relative;
+	display: flex;
+	text-align: center;
+	margin:auto;
+}
+
+.hero-image img{
+	max-width:100%; /* this allows images to be fluid and flexible to change when changing the screen size */
+}
+
+.hero-text{
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* This positions the text in the middle of the image*/
+	color: white;
+	font-weight: bold;
+	font-size:4vw; /* using "vw" allows the text to be resized everytime the viewport is changed*/
+	width:100%;
+}
+
+
+/*NAVIGATION BAR STYLES*/
+
+nav{
+	display: flex;
+	margin:auto;
+	background-color: rgb(40, 186, 162);
+	justify-content: center;
+	font-size: 20px;
+	text-align: center;
+}
+
+nav ul {
+	margin:0;
+	padding:0;
+}
+
+nav ul li{
+	float:left;
+	list-style-type:none; /* removes the dot points */
+	position: relative;
+}
+
+nav ul li a {
+	display: block; 
+	color:white;
+	font-weight: bold;
+	padding-top: 20px;
+	width:150px;
+	height: 40px;
+	text-align: center;
+}
+
+nav ul li a:hover{
+	background-color: rgb(27, 122, 107); /* Everytime the mouse hovers over the menu, the background colour darkens */
+}
+
+nav ul li ul {
+	display: none; /* this lets us create the drop down effect, by hiding the submenus when its not being hovered over*/
+	position: absolute; 
+	background-color: rgb(40, 186, 162);
+	border-radius:0px 0px 4px 4px;
+	padding:0;
+}
+
+nav ul li:hover ul{
+	display: block; /* this lets us create the drop down effect whenever the user hovers over each menu it shows the submenus*/
+}
+
+nav ul li ul li {
+	width: 100%;
+	border-radius: 4px;
+}
+
+nav ul li ul li a:hover{
+	background-color: rgb(27, 122, 107);
+}
+
+
+
+/*STACKED NAVIGATION BAR STYLES*/
+
+.stacked-nav{ 
+	display: none; /*hiding the stacked navigation bar until the screen is resized */
+} 
+
+/*FUNCTION*/
+.multi-level, .item ul, .stacked-nav input[type="checkbox"] { 
+    display: none; /* This hides the checkboxes and the sub-menus*/
+}
+#menu:checked ~ .multi-level, .item input:checked ~ ul { /*whenever the checkbox is checked it will display the sub-menus*/
+    display: block;
+}
+
+/*STYLES*/
+
+label:hover {
+    cursor: pointer;
+}
+label {
+    width: 100%;
+	display: block;
+	font-weight: bold;
+	color: rgb(35, 56, 78);
+	font-size: 18px;
+}
+
+.stacked-nav {
+    width: 100%;
+	overflow-x: hidden;
+	font-family: Helvetica;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: white;
+    background-color:rgb(40, 186, 162);
+}
+
+.stacked-nav ul, .stacked-nav li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 2em;
+    width: 100%;
+}
+
+label:hover {
+	color:rgb(40, 186, 162);
+}
+
+.item ul {
+    padding: 0 0.25em;
+}
+.stacked-nav li a {
+	font-size: 18px;
+    line-height: 50px;
+    margin: 0;
+    padding: 15px;
+    color: rgb(35, 56, 78);
+}
+
+.stacked-nav li a:hover {
+   color:rgb(40, 186, 162);
+}
+
+
+/* LEFT SIDE BAR STYLES*/
+
+.impacts-header img{
+	width:100%;
+}
+
+.impacts{
+	background-color:rgb(35, 56, 78);
+	width:3300px;
+	margin:20px 20px 20px 0px;
+	height:100%;
+	color:white;
+}
+
+.impacts h2{
+	margin-left:15px;
+	color:rgb(40, 186, 162);
+	padding:10px;
+}
+
+dt{
+	margin:15px;
+	font-weight:bold;
+
+}
+
+dd{
+	padding-right:10px;
+}
+
+.readmore{
+	display:flex;
+	justify-content: center;
+	background-color:rgb(40, 186, 162);
+	margin:15px 65px 15px 35px;
+	padding:5px;
+	border-radius: 100px;
+	color:rgb(35, 56, 78);
+}
+
+.readmore:hover{
+	background-color:rgb(26, 240, 208);
+}
+
+
+/* CENTER CONTENT STYLES*/
+.overview{
+	background-color:rgb(255, 255, 255); 
+	margin-top:20px;
+	height:100%; /* making the height 100% removes the extra exmpty space that's not filled by words */
+	color:rgb(35, 56, 78);
+	border-radius: 10px;
+	border:2.5px dashed rgb(40, 186, 162);
+	line-height: 23px;
+}
+
+.overview-content{
+	padding:30px 30px 20px 30px;
+}
+
+
+.overview h2{
+	text-align: center;
+	margin:0;
+	font-size:30px;
+	padding-bottom: 10px;
+}
+
+figure img{
+	width:100%;
+}
+
+.overview img{
+	width:100%;
+	margin:auto;
+	border-radius: 8px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.overview-about-us{
+	background-color:rgb(225, 233, 243); /* adding a different backgroud colour to break up the content */
+	margin:20px;
+	padding:0px 0px 10px 0px;
+	border-radius: 10px;
+}
+
+.overview-about-us p{
+	padding:0px 20px 0px 20px;
+}
+
+.overview-about-us h2{
+	padding-top:10px;
+}
+
+
+.readmore-o{
+	display:flex;
+	justify-content: center;
+	background-color:rgb(40, 186, 162);
+	padding:10px 20px 10px 20px;
+	border-radius: 100px;
+	color:rgb(35, 56, 78);
+	float:right;
+	margin:0px 0px 15px 0px;
+}
+
+.readmore-o:hover{
+	background-color:rgb(26, 240, 208);
+}
+
+figure{
+	font-style: italic;
+	font-size: 13px;
+}
+
+
+/* RIGHT SIDE BAR STYLES*/
+
+.latestnews{
+	background-color:rgb(35, 56, 78);
+	width:2800px;
+	margin:20px 0px 20px 20px;
+	height:100%;
+	padding-bottom:15px;
+}
+
+
+.latestnews-content{
+	padding:5px;
+}
+
+.latestnews h2{
+	margin-left:10px;
+	color:rgb(40, 186, 162);
+}
+
+.latestnews a{
+	color:white;
+}
+
+.latestnews li{
+	border-top: 2px solid rgb(90, 90, 90); /* this creates a line ontop of the listed items to create a sense of sectioning */
+	padding:10px;
+	margin-right:15px;
+}
+
+.latestnews li:last-child{ /* using the last-child selector to select the last element of the list to apply styles to it individually */
+	border-bottom: 2px solid rgb(90, 90, 90);
+}
+
+.latestnews img{
+	width:100%;
+}
+
+
+.latestnews ul{
+	list-style-image: url(images/icons8-news-16.png); /* This changes the style of the dot points into an image of a newspaper */
+}
+
+h4{
+	padding:0;
+	margin:0;
+}
+
+
+/*FOOTER STYLES*/
+
+footer{
+	clear:both; /* This stops the footer from floating upwards */
+	background-color: rgb(35, 56, 78);
+	text-align: center;
+	color:white;
+	padding:15px;
+	margin-top:20px;
+}
+
+.media a{
+    font-size:30px;
+	color:#ffffff;
+	padding:5px 15px 15px 15px;
+}
+
+footer h2 {
+	padding:5px;
+	padding-bottom: 0px;
+	margin-bottom:15px;
+	font-size:30px;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width:1000px){
+	.readmore{
+		margin:15px 40px 15px 10px;
+	}
+
+	.hero-text{
+		font-size: 5vw;
+	}
+
+	article .latestnews-content{
+		margin:0px;
+		padding:0px;
+	}
+}
+
+@media (max-width:800px){
+	.stacked-nav{ 
+		display: contents; /* showing the stacked nav bar */
+	}
+
+	label{
+		background-color:rgb(205, 219, 236);
+	}
+
+	.hero-text{
+		font-size: 6vw;
+	}
+
+	nav{
+		display: none; /* removing the previous nav bar to be replaced with the stacked nav bar*/
+	}
+
+	.content{
+		flex-wrap: wrap; /* This makes the columns stack on top of each other */
+	}
+	
+	.impacts{
+		margin:20px 0px 0px 0px;
+	}
+
+	.latestnews{
+		margin:20px 0px 0px 0px;
+	}
+}
